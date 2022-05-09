@@ -15,6 +15,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
@@ -63,7 +64,7 @@ public class EditCourseActivity extends AppCompatActivity {
             courseID = courseRVModal.getCourseID();
         }
 
-        dbReference = firebaseDatabase.getReference("Course").child(courseID);
+        dbReference = firebaseDatabase.getReference("Courses").child(courseID);
         updateCourse_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,6 +112,23 @@ public class EditCourseActivity extends AppCompatActivity {
     }
 
     private void deleteCourse() {
+        System.out.println(dbReference);
+
+//        Query query = dbReference.orderByChild("courseID").equalTo(courseID);
+//        query.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+//                    System.out.println(snapshot1.getRef());
+//                    snapshot1.getRef().removeValue();
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
         dbReference.removeValue();
         Toast.makeText(this, "Course deleted...", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(EditCourseActivity.this, MainActivity.class));
