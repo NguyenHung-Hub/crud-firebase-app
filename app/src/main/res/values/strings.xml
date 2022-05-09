@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">CRUDFirebase</string>
+    <string name="enter_username">Enter username</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="register">Register</string>
+    <string name="already_a_user_login_here">Already a User? Login here</string>
+    <string name="login">Login</string>
+    <string name="new_user_register_here">New User? Register here</string>
+    <string name="enter_course_price">Enter course price</string>
+    <string name="enter_course_name">Enter course name</string>
+    <string name="enter_course_suited_for">Enter course suited for</string>
+    <string name="enter_course_image_link">Enter course image link</string>
+    <string name="enter_course_link">Enter course link</string>
+    <string name="enter_course_description">Enter course description</string>
+    <string name="add_course">Add course</string>
+    <string name="delete_course">Delete Course</string>
+    <string name="update_course">Update Course</string>
+    <string name="course_name">Course name</string>
+    <string name="course_description">Course Description</string>
+    <string name="price">Price</string>
+    <string name="suited_for">Suited for</string>
+    <string name="edit_course">Edit course</string>
+    <string name="view_details">View details</string>
+    <string name="logout">Logout</string>
+</resources>
